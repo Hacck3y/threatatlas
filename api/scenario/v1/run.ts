@@ -1,7 +1,7 @@
 export const config = { runtime: 'edge' };
 
 import { isCallerPremium } from '../../../server/_shared/premium-check';
-import { getScenarioTemplate } from '../../../server/worldmonitor/supply-chain/v1/scenario-templates';
+import { getScenarioTemplate } from '../../../server/threatatlas/supply-chain/v1/scenario-templates';
 
 const JOB_ID_CHARSET = 'abcdefghijklmnopqrstuvwxyz0123456789';
 

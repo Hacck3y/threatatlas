@@ -792,9 +792,9 @@ export function renderNotificationsSettings(_host: NotificationsSettingsHost): N
 
       const onMessage = (e: MessageEvent): void => {
         const trustedOrigin = e.origin === window.location.origin ||
-          e.origin === 'https://worldmonitor.app' ||
-          e.origin === 'https://www.worldmonitor.app' ||
-          e.origin.endsWith('.worldmonitor.app');
+          e.origin === 'https://threatatlas.app' ||
+          e.origin === 'https://www.threatatlas.app' ||
+          e.origin.endsWith('.threatatlas.app');
         const fromSlack = slackOAuthPopup !== null && e.source === slackOAuthPopup;
         const fromDiscord = discordOAuthPopup !== null && e.source === discordOAuthPopup;
         if (!trustedOrigin || (!fromSlack && !fromDiscord)) return;

@@ -10,7 +10,7 @@ const sentryDsn = import.meta.env.VITE_SENTRY_DSN?.trim();
 
 // Known third-party hosts fetched by MapLibre (tiles, styles, glyphs, sprites).
 // Used by the beforeSend `Failed to fetch (<host>)` filter to avoid suppressing
-// failures from our self-hosted R2 PMTiles bucket or any api.worldmonitor.app
+// failures from our self-hosted R2 PMTiles bucket or any api.threatatlas.app
 // fetches that happen to land on a maplibre-framed stack.
 const MAPLIBRE_THIRD_PARTY_TILE_HOSTS = new Set([
   'tilecache.rainviewer.com',
@@ -23,7 +23,7 @@ const MAPLIBRE_THIRD_PARTY_TILE_HOSTS = new Set([
 Sentry.init({
   dsn: sentryDsn || undefined,
   release: `worldmonitor@${__APP_VERSION__}`,
-  environment: (location.hostname === 'threatatlas.app' || location.hostname.endsWith('.worldmonitor.app')) ? 'production'
+  environment: (location.hostname === 'threatatlas.app' || location.hostname.endsWith('.threatatlas.app')) ? 'production'
     : location.hostname.includes('vercel.app') ? 'preview'
     : 'development',
   enabled: Boolean(sentryDsn) && !location.hostname.startsWith('localhost') && !('__TAURI_INTERNALS__' in window),
@@ -297,7 +297,7 @@ Sentry.init({
     // network errors as `Failed to fetch (<hostname>)` and rethrows in a Generator-backed
     // Promise that leaks to onunhandledrejection even though DeckGLMap's map-error handler
     // already logs it as a warning. Allowlist KNOWN third-party tile/style/glyph hosts —
-    // leaves first-party fetch failures (self-hosted R2 PMTiles bucket, api.worldmonitor.app)
+    // leaves first-party fetch failures (self-hosted R2 PMTiles bucket, api.threatatlas.app)
     // to surface so a real basemap regression is never silently dropped (WORLDMONITOR-NE/NF).
     if (isMaplibreAjaxFailure && frames.some(f => /\/maplibre-[A-Za-z0-9_-]+\.js/.test(f.filename ?? ''))) {
       const hostMatch = msg.match(/^Failed to fetch \(([^)]+)\)$/);
@@ -545,7 +545,7 @@ initMetaTags();
 
 // In desktop mode, route /api/* calls to the local Tauri sidecar backend.
 installRuntimeFetchPatch();
-// In web production, route RPC calls through api.worldmonitor.app (Cloudflare edge).
+// In web production, route RPC calls through api.threatatlas.app (Cloudflare edge).
 installWebApiRedirect();
 loadDesktopSecrets().catch(() => {});
 

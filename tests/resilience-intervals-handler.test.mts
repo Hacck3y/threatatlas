@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { afterEach, describe, it } from 'node:test';
 
-import { getResilienceScore } from '../server/worldmonitor/resilience/v1/get-resilience-score.ts';
+import { getResilienceScore } from '../server/threatatlas/resilience/v1/get-resilience-score.ts';
 import { createRedisFetch } from './helpers/fake-upstash-redis.mts';
 import { RESILIENCE_FIXTURES } from './helpers/resilience-fixtures.mts';
 

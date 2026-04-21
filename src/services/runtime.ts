@@ -10,7 +10,7 @@ const ENV = (() => {
 })();
 
 const WS_API_URL = ENV.VITE_WS_API_URL || '';
-const DEFAULT_WEB_API_URL = 'https://api.worldmonitor.app';
+const DEFAULT_WEB_API_URL = 'https://api.threatatlas.app';
 const KEYED_CLOUD_API_PATTERN = /^\/api\/(?:[^/]+\/v1\/|bootstrap(?:\?|$)|polymarket(?:\?|$)|ais-snapshot(?:\?|$))/;
 
 const DEFAULT_REMOTE_HOSTS: Record<string, string> = {
@@ -122,8 +122,8 @@ export function getApiBaseUrl(): string {
 
 function isWorldMonitorWebHost(hostname: string): boolean {
   return hostname === 'threatatlas.app'
-    || hostname === 'www.worldmonitor.app'
-    || hostname.endsWith('.worldmonitor.app');
+    || hostname === 'www.threatatlas.app'
+    || hostname.endsWith('.threatatlas.app');
 }
 
 export function getConfiguredWebApiBaseUrl(): string {
@@ -166,7 +166,7 @@ export function getRemoteApiBaseUrl(): string {
   if (fromHosts) return fromHosts;
 
   // Desktop builds may not set VITE_WS_API_URL; default to production.
-  if (isDesktopRuntime()) return 'https://worldmonitor.app';
+  if (isDesktopRuntime()) return 'https://threatatlas.app';
   return '';
 }
 
@@ -211,9 +211,9 @@ function extractHostnames(...urls: (string | undefined)[]): string[] {
 
 const APP_HOSTS = new Set([
   'threatatlas.app',
-  'www.worldmonitor.app',
-  'tech.worldmonitor.app',
-  'api.worldmonitor.app',
+  'www.threatatlas.app',
+  'tech.threatatlas.app',
+  'api.threatatlas.app',
   'localhost',
   '127.0.0.1',
   ...extractHostnames(WS_API_URL, ENV.VITE_WS_RELAY_URL),
@@ -223,7 +223,7 @@ function isAppOriginUrl(urlStr: string): boolean {
   try {
     const u = new URL(urlStr);
     const host = u.hostname;
-    return APP_HOSTS.has(host) || host.endsWith('.worldmonitor.app');
+    return APP_HOSTS.has(host) || host.endsWith('.threatatlas.app');
   } catch {
     return false;
   }
@@ -833,7 +833,7 @@ export function installWebApiRedirect(): void {
           return fetchWithRedirectFallback(`${API_BASE}${input}`, input, enriched);
         }
         // Absolute URL already targeting the API base (generated clients call fetch
-        // with full URLs like https://api.worldmonitor.app/api/...) — just inject auth.
+        // with full URLs like https://api.threatatlas.app/api/...) — just inject auth.
         if (input.startsWith(`${API_BASE}/api/`)) {
           const pathAndSearch = input.slice(API_BASE.length);
           const enriched = await enrichInitForPremium(pathAndSearch, init);

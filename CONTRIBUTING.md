@@ -75,7 +75,7 @@ Variants share all code but differ in default panels, map layers, and RSS feeds.
 1. **Fork** the repository on GitHub
 2. **Clone** your fork locally:
    ```bash
-   git clone https://github.com/<your-username>/worldmonitor.git
+   git clone https://github.com/<your-username>/threatatlas.git
    cd worldmonitor
    ```
 3. **Create a branch** for your work:
@@ -190,7 +190,7 @@ That said, **all code is held to the same quality bar regardless of how it was w
 ### File Organization
 
 - Static layer/geo data and variant configs go in `src/config/`
-- Sebuf handler implementations go in `server/worldmonitor/{domain}/v1/`
+- Sebuf handler implementations go in `server/threatatlas/{domain}/v1/`
 - Edge function gateway and legacy endpoints go in `api/`
 - UI components (panels, map, modals) go in `src/components/`
 - Service modules (data fetching, client wrappers) go in `src/services/`
@@ -206,7 +206,7 @@ Sebuf is the project's custom Proto-first HTTP RPC framework — a lightweight a
 2. **Code generation** (`make generate`) produces:
    - TypeScript clients in `src/generated/client/` (e.g., `MarketServiceClient`)
    - Server route factories in `src/generated/server/` (e.g., `createMarketServiceRoutes`)
-3. **Handlers** in `server/worldmonitor/{domain}/v1/handler.ts` implement the service interface
+3. **Handlers** in `server/threatatlas/{domain}/v1/handler.ts` implement the service interface
 4. **Gateway** in `api/[domain]/v1/[rpc].ts` registers all handlers and routes requests
 5. **Clients** in `src/services/{domain}/index.ts` wrap the generated client for app use
 
@@ -241,7 +241,7 @@ To add a new data layer to the map:
 1. **Define the data source** — identify the API or dataset you want to integrate
 2. **Add the proto service** (if the data needs a backend proxy) — define messages and RPC methods in `proto/worldmonitor/{domain}/v1/`
 3. **Generate stubs** — run `make generate`
-4. **Implement the handler** in `server/worldmonitor/{domain}/v1/`
+4. **Implement the handler** in `server/threatatlas/{domain}/v1/`
 5. **Register the handler** in `api/[domain]/v1/[rpc].ts` and `vite.config.ts` (for local dev)
 6. **Create the service module** in `src/services/{domain}/` wrapping the generated client
 7. **Add the layer config** and implement the map renderer following existing layer patterns

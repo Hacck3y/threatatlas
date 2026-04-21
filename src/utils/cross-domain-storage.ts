@@ -1,4 +1,4 @@
-const COOKIE_DOMAIN = '.worldmonitor.app';
+const COOKIE_DOMAIN = '.threatatlas.app';
 const MAX_AGE_SECONDS = 365 * 24 * 60 * 60;
 
 function usesCookies(): boolean {

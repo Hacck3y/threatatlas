@@ -123,7 +123,7 @@ async function callEmbeddingsApi({ fetchImpl, apiKey, missingTitles, timeoutMs }
       headers: {
         Authorization: `Bearer ${apiKey}`,
         'Content-Type': 'application/json',
-        'HTTP-Referer': 'https://worldmonitor.app',
+        'HTTP-Referer': 'https://threatatlas.app',
         'X-Title': 'World Monitor',
         'User-Agent': 'worldmonitor-digest/1.0',
       },

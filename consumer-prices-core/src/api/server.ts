@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import Fastify from 'fastify';
 import cors from '@fastify/cors';
-import { worldmonitorRoutes } from './routes/worldmonitor.js';
+import { worldmonitorRoutes } from './routes/threatatlas.js';
 import { healthRoutes } from './routes/health.js';
 
 const server = Fastify({ logger: { level: process.env.LOG_LEVEL ?? 'info' } });

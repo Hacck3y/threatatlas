@@ -858,7 +858,7 @@ export default defineConfig(({ mode }) => {
       proxy: {
         // Widget agent — forward to Railway relay for SSE streaming
         '/widget-agent': {
-          target: 'https://proxy.worldmonitor.app',
+          target: 'https://proxy.threatatlas.app',
           changeOrigin: true,
         },
         // Yahoo Finance API

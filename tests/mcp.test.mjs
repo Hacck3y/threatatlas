@@ -60,7 +60,7 @@ describe('api/mcp.ts — PRO MCP Server', () => {
     });
     const res = await handler(req);
     assert.equal(res.status, 401);
-    assert.ok(res.headers.get('www-authenticate')?.includes('Bearer realm="worldmonitor"'), 'must include WWW-Authenticate header');
+    assert.ok(res.headers.get('www-authenticate')?.includes('Bearer realm="threatatlas"'), 'must include WWW-Authenticate header');
     const body = await res.json();
     assert.equal(body.error?.code, -32001);
   });
@@ -89,7 +89,7 @@ describe('api/mcp.ts — PRO MCP Server', () => {
     assert.equal(body.jsonrpc, '2.0');
     assert.equal(body.id, 1);
     assert.equal(body.result?.protocolVersion, '2025-03-26');
-    assert.equal(body.result?.serverInfo?.name, 'worldmonitor');
+    assert.equal(body.result?.serverInfo?.name, 'threatatlas');
     assert.ok(res.headers.get('mcp-session-id'), 'Mcp-Session-Id header must be present');
   });
 

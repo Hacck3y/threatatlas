@@ -134,7 +134,7 @@ export default async function handler(req: Request): Promise<Response> {
       {
         error: 'pro_required',
         message: 'The Brief is available on the Pro plan.',
-        upgradeUrl: 'https://worldmonitor.app/pro',
+        upgradeUrl: 'https://threatatlas.app/pro',
       },
       403,
       cors,

@@ -6,8 +6,8 @@ import {
   RESILIENCE_STATIC_META_KEY,
   failedDimensionsFromDatasets,
   readFailedDatasets,
-} from '../server/worldmonitor/resilience/v1/_source-failure.ts';
-import type { ResilienceDimensionId } from '../server/worldmonitor/resilience/v1/_dimension-scorers.ts';
+} from '../server/threatatlas/resilience/v1/_source-failure.ts';
+import type { ResilienceDimensionId } from '../server/threatatlas/resilience/v1/_dimension-scorers.ts';
 
 // Adapter keys enumerated in scripts/seed-resilience-static.mjs
 // `fetchAllDatasetMaps()`. Every adapter that can end up in the

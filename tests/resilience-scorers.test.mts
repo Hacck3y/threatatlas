@@ -12,7 +12,7 @@ import {
   scoreEnergy,
   scoreInfrastructure,
   scoreTradeSanctions,
-} from '../server/worldmonitor/resilience/v1/_dimension-scorers.ts';
+} from '../server/threatatlas/resilience/v1/_dimension-scorers.ts';
 import { installRedis } from './helpers/fake-upstash-redis.mts';
 import { RESILIENCE_FIXTURES } from './helpers/resilience-fixtures.mts';
 

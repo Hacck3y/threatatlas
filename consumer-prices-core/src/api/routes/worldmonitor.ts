@@ -6,7 +6,7 @@ import {
   buildMoversSnapshot,
   buildOverviewSnapshot,
   buildRetailerSpreadSnapshot,
-} from '../../snapshots/worldmonitor.js';
+} from '../../snapshots/threatatlas.js';
 
 export async function worldmonitorRoutes(fastify: FastifyInstance) {
   fastify.get('/overview', async (request, reply) => {

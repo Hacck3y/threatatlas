@@ -10,7 +10,7 @@ import {
   buildMoversSnapshot,
   buildOverviewSnapshot,
   buildRetailerSpreadSnapshot,
-} from '../snapshots/worldmonitor.js';
+} from '../snapshots/threatatlas.js';
 import { loadAllBasketConfigs, loadAllRetailerConfigs } from '../config/loader.js';
 import { closePool } from '../db/client.js';
 

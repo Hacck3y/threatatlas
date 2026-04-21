@@ -4,7 +4,7 @@ import handler from './og-story.js';
 
 function renderOgStory(query = '') {
   const req = {
-    url: `https://worldmonitor.app/api/og-story${query ? `?${query}` : ''}`,
+    url: `https://threatatlas.app/api/og-story${query ? `?${query}` : ''}`,
     headers: { host: 'threatatlas.app' },
   };
 

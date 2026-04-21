@@ -1,8 +1,8 @@
 import assert from 'node:assert/strict';
 import { afterEach, describe, it } from 'node:test';
 
-import { getResilienceRanking } from '../server/worldmonitor/resilience/v1/get-resilience-ranking.ts';
-import { buildRankingItem, sortRankingItems } from '../server/worldmonitor/resilience/v1/_shared.ts';
+import { getResilienceRanking } from '../server/threatatlas/resilience/v1/get-resilience-ranking.ts';
+import { buildRankingItem, sortRankingItems } from '../server/threatatlas/resilience/v1/_shared.ts';
 import { __resetKeyPrefixCacheForTests } from '../server/_shared/redis.ts';
 import { installRedis } from './helpers/fake-upstash-redis.mts';
 import { RESILIENCE_FIXTURES } from './helpers/resilience-fixtures.mts';

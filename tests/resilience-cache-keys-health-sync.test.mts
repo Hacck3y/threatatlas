@@ -8,7 +8,7 @@ import {
   RESILIENCE_SCORE_CACHE_PREFIX,
   RESILIENCE_RANKING_CACHE_KEY,
   RESILIENCE_HISTORY_KEY_PREFIX,
-} from '../server/worldmonitor/resilience/v1/_shared.ts';
+} from '../server/threatatlas/resilience/v1/_shared.ts';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const repoRoot = resolve(__dirname, '..');
@@ -16,7 +16,7 @@ const repoRoot = resolve(__dirname, '..');
 // Phase 1 T1.9 cache-key / health-registry sync guard.
 //
 // If a future PR bumps any of the resilience cache key constants in
-// server/worldmonitor/resilience/v1/_shared.ts (e.g. resilience:score:v7
+// server/threatatlas/resilience/v1/_shared.ts (e.g. resilience:score:v7
 // becomes v8), the api/health.js SEED_META / KEY_TO_DOMAIN registry MUST
 // be updated in the same PR or health probes will silently watch the
 // wrong key and stop paging on real staleness.

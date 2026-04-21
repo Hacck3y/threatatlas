@@ -48,7 +48,7 @@ export interface ResilienceDimensionScore {
   // constituent signals. Individual scorers return the zero value
   // (`{ lastObservedAtMs: 0, staleness: '' }`); `scoreAllDimensions`
   // decorates the real value in using `classifyDimensionFreshness`.
-  // See server/worldmonitor/resilience/v1/_dimension-freshness.ts.
+  // See server/threatatlas/resilience/v1/_dimension-freshness.ts.
   freshness: { lastObservedAtMs: number; staleness: '' | 'fresh' | 'aging' | 'stale' };
 }
 

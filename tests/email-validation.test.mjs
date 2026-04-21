@@ -44,7 +44,7 @@ describe('validateEmail', () => {
   });
 
   it('rejects disposable domain (passmail.net)', async () => {
-    const result = await validateEmail('worldmonitor.foo@passmail.net');
+    const result = await validateEmail('threatatlas.foo@passmail.net');
     assert.strictEqual(result.valid, false);
   });
 

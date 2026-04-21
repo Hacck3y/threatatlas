@@ -18,9 +18,9 @@ export const config = { runtime: 'edge', regions: ['iad1', 'lhr1', 'fra1', 'sfo1
 import { getCorsHeaders } from './_cors.js';
 import { isCallerPremium } from '../server/_shared/premium-check';
 import { checkRateLimit } from '../server/_shared/rate-limit';
-import { assembleAnalystContext } from '../server/worldmonitor/intelligence/v1/chat-analyst-context';
-import { buildAnalystSystemPrompt } from '../server/worldmonitor/intelligence/v1/chat-analyst-prompt';
-import { buildActionEvents } from '../server/worldmonitor/intelligence/v1/chat-analyst-actions';
+import { assembleAnalystContext } from '../server/threatatlas/intelligence/v1/chat-analyst-context';
+import { buildAnalystSystemPrompt } from '../server/threatatlas/intelligence/v1/chat-analyst-prompt';
+import { buildActionEvents } from '../server/threatatlas/intelligence/v1/chat-analyst-actions';
 import { callLlmReasoningStream } from '../server/_shared/llm';
 import { sanitizeForPrompt } from '../server/_shared/llm-sanitize.js';
 
@@ -158,7 +158,7 @@ export default async function handler(req: Request): Promise<Response> {
   const stream = prependSseEvents(
     [
       { meta: { sources: context.activeSources, degraded: context.degraded } },
-      ...buildActionEvents(query).map((a) => ({ action: a })),
+      ...buildActionEvents(query).map((a: any) => ({ action: a })),
     ],
     llmStream,
   );

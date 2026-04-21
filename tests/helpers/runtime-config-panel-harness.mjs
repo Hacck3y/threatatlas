@@ -490,8 +490,8 @@ export function createBrowserEnvironment() {
     removeEventListener() {},
     open() {},
     location: {
-      origin: 'https://worldmonitor.test',
-      href: 'https://worldmonitor.test/',
+      origin: 'https://threatatlas.test',
+      href: 'https://threatatlas.test/',
     },
     navigator: {
       clipboard: {

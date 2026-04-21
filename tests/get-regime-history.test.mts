@@ -4,18 +4,18 @@ import { readFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { adaptTransition } from '../server/worldmonitor/intelligence/v1/get-regime-history';
+import { adaptTransition } from '../server/threatatlas/intelligence/v1/get-regime-history';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, '..');
 
 const handlerSrc = readFileSync(
-  resolve(root, 'server/worldmonitor/intelligence/v1/get-regime-history.ts'),
+  resolve(root, 'server/threatatlas/intelligence/v1/get-regime-history.ts'),
   'utf-8',
 );
 
 const handlerIndexSrc = readFileSync(
-  resolve(root, 'server/worldmonitor/intelligence/v1/handler.ts'),
+  resolve(root, 'server/threatatlas/intelligence/v1/handler.ts'),
   'utf-8',
 );
 

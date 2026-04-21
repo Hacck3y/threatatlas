@@ -11,7 +11,7 @@ import {
   SEEDED_HS2_CODES,
   type MultiSectorCostShock,
   type SeededProduct,
-} from '../../../server/worldmonitor/supply-chain/v1/_multi-sector-shock';
+} from '../../../server/threatatlas/supply-chain/v1/_multi-sector-shock';
 // @ts-expect-error — JS module, no declaration file
 import { readJsonFromUpstash } from '../../_upstash-json.js';
 
@@ -101,7 +101,7 @@ export default async function handler(req: Request): Promise<Response> {
 
   const products = Array.isArray(productsCache?.products) ? productsCache.products : [];
   const importsByHs2 = aggregateAnnualImportsByHs2(products);
-  const hasAnyImports = Object.values(importsByHs2).some(v => v > 0);
+  const hasAnyImports = Object.values(importsByHs2).some((v: any) => v > 0);
   const warRiskTier = statusCache?.chokepoints?.find(c => c.id === chokepointId)?.warRiskTier
     ?? 'WAR_RISK_TIER_NORMAL';
 
@@ -110,7 +110,7 @@ export default async function handler(req: Request): Promise<Response> {
       JSON.stringify({
         ...emptyResponse(iso2, chokepointId, closureDays, 'No seeded import data available for this country'),
         // Still emit the empty sector skeleton so the UI can render rows at 0.
-        sectors: SEEDED_HS2_CODES.map(hs2 => ({
+        sectors: SEEDED_HS2_CODES.map((hs2: any) => ({
           hs2,
           hs2Label: MULTI_SECTOR_HS2_LABELS[hs2] ?? `HS ${hs2}`,
           importValueAnnual: 0,
@@ -130,7 +130,7 @@ export default async function handler(req: Request): Promise<Response> {
   }
 
   const sectors = computeMultiSectorShocks(importsByHs2, chokepointId, warRiskTier, closureDays);
-  const totalAddedCost = sectors.reduce((sum, s) => sum + s.totalCostShock, 0);
+  const totalAddedCost = sectors.reduce((sum: number, s: any) => sum + s.totalCostShock, 0);
 
   const response: MultiSectorCostShockResponse = {
     iso2,

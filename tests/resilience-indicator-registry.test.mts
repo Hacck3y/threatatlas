@@ -1,9 +1,9 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 
-import { RESILIENCE_DIMENSION_ORDER } from '../server/worldmonitor/resilience/v1/_dimension-scorers.ts';
-import { INDICATOR_REGISTRY } from '../server/worldmonitor/resilience/v1/_indicator-registry.ts';
-import type { IndicatorSpec } from '../server/worldmonitor/resilience/v1/_indicator-registry.ts';
+import { RESILIENCE_DIMENSION_ORDER } from '../server/threatatlas/resilience/v1/_dimension-scorers.ts';
+import { INDICATOR_REGISTRY } from '../server/threatatlas/resilience/v1/_indicator-registry.ts';
+import type { IndicatorSpec } from '../server/threatatlas/resilience/v1/_indicator-registry.ts';
 
 describe('indicator registry', () => {
   it('covers all 19 dimensions', () => {

@@ -214,7 +214,7 @@ describe(`MCP Presets — live connectivity (${LIVE ? 'ENABLED' : 'SKIPPED — s
         },
         body: JSON.stringify({
           jsonrpc: '2.0', id: 1, method: 'initialize',
-          params: { protocolVersion: '2025-03-26', capabilities: {}, clientInfo: { name: 'worldmonitor', version: '1.0' } },
+          params: { protocolVersion: '2025-03-26', capabilities: {}, clientInfo: { name: 'threatatlas', version: '1.0' } },
         }),
         signal: controller.signal,
       });

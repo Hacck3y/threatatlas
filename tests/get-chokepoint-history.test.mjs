@@ -7,11 +7,11 @@ import { fileURLToPath } from 'node:url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, '..');
 const handlerSrc = readFileSync(
-  resolve(root, 'server/worldmonitor/supply-chain/v1/get-chokepoint-history.ts'),
+  resolve(root, 'server/threatatlas/supply-chain/v1/get-chokepoint-history.ts'),
   'utf-8',
 );
 const handlerMapSrc = readFileSync(
-  resolve(root, 'server/worldmonitor/supply-chain/v1/handler.ts'),
+  resolve(root, 'server/threatatlas/supply-chain/v1/handler.ts'),
   'utf-8',
 );
 
