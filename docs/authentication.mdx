@@ -1,0 +1,22 @@
+---
+title: "Authentication & Access"
+description: "Current access model for ThreatAtlas and notes on the optional account plumbing that remains in the codebase."
+---
+
+ThreatAtlas no longer uses sign-in, subscriptions, or tier checks to unlock dashboard panels. The app defaults to open access.
+
+## Current model
+
+- Dashboard panels, workflows, exports, and playback are available by default.
+- Optional auth plumbing may still exist for user-specific preferences or future account-linked features.
+- New routes should stay open unless they truly require per-user state.
+
+## Remaining infrastructure
+
+Some account-oriented modules remain in the repository because they are low-risk to keep and still support future work:
+
+- `src/services/auth-state.ts` for optional browser session state
+- `src/services/clerk.ts` for optional Clerk bootstrap
+- `server/auth-session.ts` for validating bearer tokens on user-bound endpoints
+
+These pieces should be treated as supporting infrastructure, not as a paywall or access-control layer for the main dashboard.

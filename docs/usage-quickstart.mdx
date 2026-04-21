@@ -1,0 +1,74 @@
+---
+title: "Quickstart"
+description: "Make your first ThreatAtlas API call in under a minute — curl, JavaScript, and Python."
+---
+
+## 1. Get an API key
+
+PRO subscribers get an API key from [threatatlas.app/pro](https://www.threatatlas.app/pro). Keys look like `wm_live_...` and are at least 16 characters.
+
+<Tip>
+Browser origins on `threatatlas.app` / `localhost` are trusted without a key. You only need a key for server-to-server use or from untrusted origins.
+</Tip>
+
+## 2. Call an endpoint
+
+### curl
+
+```bash
+curl -s 'https://api.threatatlas.app/api/conflict/v1/list-conflict-events?limit=5' \
+  -H 'X-ThreatAtlas-Key: wm_live_...'
+```
+
+### JavaScript (Node or browser)
+
+```js
+const res = await fetch(
+  'https://api.threatatlas.app/api/market/v1/get-quotes?symbols=AAPL,TSLA',
+  { headers: { 'X-ThreatAtlas-Key': process.env.WM_KEY } }
+);
+const data = await res.json();
+console.log(data);
+```
+
+### Python
+
+```python
+import os, httpx
+
+r = httpx.get(
+    "https://api.threatatlas.app/api/economic/v1/get-fred-series",
+    params={"series_id": "FEDFUNDS"},
+    headers={"X-ThreatAtlas-Key": os.environ["WM_KEY"]},
+)
+r.raise_for_status()
+print(r.json())
+```
+
+## 3. Hydrate everything at once
+
+For dashboards, use `/api/bootstrap` to pull all seeded caches in one request:
+
+```bash
+curl -s 'https://api.threatatlas.app/api/bootstrap' \
+  -H 'X-ThreatAtlas-Key: wm_live_...'
+```
+
+See [Platform endpoints](/api-platform#bootstrap) for the response shape.
+
+## 4. Plug into an MCP client
+
+Point any MCP-compatible client at the server URL — the client handles OAuth automatically:
+
+```
+https://api.threatatlas.app/api/mcp
+```
+
+See [MCP](/mcp) for client-specific setup.
+
+## Next
+
+- [Authentication](/usage-auth) — all three auth modes
+- [Rate limits](/usage-rate-limits) — per-endpoint caps
+- [Errors](/usage-errors) — response shapes and retry guidance
+- [API Reference](/api/ConflictService.openapi.yaml) — every RPC with request/response schemas

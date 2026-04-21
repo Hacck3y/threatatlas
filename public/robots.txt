@@ -1,0 +1,10 @@
+# ThreatAtlas - protect API routes from crawlers
+User-agent: *
+Allow: /
+Allow: /api/story
+Allow: /api/og-story
+Disallow: /api/
+Disallow: /tests/
+
+Sitemap: https://www.threatatlas.app/sitemap.xml
+Sitemap: https://www.threatatlas.app/blog/sitemap-index.xml

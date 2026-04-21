@@ -1,0 +1,28 @@
+---
+title: "Stock Analysis"
+description: "On-demand equity analysis per ticker with buy/hold/sell signal, price targets, analyst consensus, upgrades and downgrades, insider transactions, and price sparklines."
+---
+
+The **Stock Analysis** panel (internal id `stock-analysis`) is the dashboard's per-ticker deep-dive: one analysis at a time, with a structured synthesis of signal (buy / hold / sell), price targets, analyst consensus, recent upgrades and downgrades, insider transactions, and a price sparkline.
+
+## What the panel shows
+
+- Symbol and price
+- Signal badge
+- Thesis bullets
+- Analyst consensus
+- Price targets
+- Recent upgrades and downgrades
+- Insider transactions
+- Sparkline history
+
+Panel id is `stock-analysis`; canonical component is `src/components/StockAnalysisPanel.ts`.
+
+## Availability
+
+The panel is enabled in the full and finance variants. It is not included in the tech, commodity, or happy variants.
+
+## API reference
+
+- [Markets service](/api/MarketService.openapi.yaml)
+- Related: [Backtesting](/panels/stock-backtest)

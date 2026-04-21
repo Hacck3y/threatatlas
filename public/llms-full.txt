@@ -1,0 +1,26 @@
+# ThreatAtlas
+
+ThreatAtlas is an open-source global threat monitoring dashboard for geopolitics, military activity, markets, climate events, cyber incidents, maritime activity, aviation, and infrastructure signals.
+
+## Project Summary
+
+- TypeScript SPA built with Vite and Preact-compatible components.
+- Interactive map and globe views using MapLibre GL, deck.gl, and globe.gl.
+- 60+ API endpoints for external data aggregation and cached intelligence feeds.
+- Tauri desktop shell with a local sidecar service for native packaging.
+- Multiple dashboard variants: full, technology, finance, commodity, and positive-news views.
+- Rebranded and cleaned for an educational college-project presentation.
+
+## Core Features
+
+- Real-time global dashboard with panels for conflicts, markets, supply chains, weather, health, cyber, and intelligence briefs.
+- Layered map interface for events, facilities, infrastructure, chokepoints, flights, vessels, and regional risk signals.
+- Open access by default, with removed premium, sign-in, checkout, ad, and upgrade surfaces.
+- Local-friendly setup using `.env.example` and optional external API keys.
+
+## Useful Links
+
+- Main app: https://threatatlas.app
+- Documentation: https://www.threatatlas.app/docs
+- Blog: https://www.threatatlas.app/blog
+- Source: https://github.com/hacck3y/threatatlas

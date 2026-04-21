@@ -1,0 +1,23 @@
+---
+title: "Backtesting"
+description: "Historical return and percent-change visualisation for previously analysed tickers so you can see how past signals would have played out."
+---
+
+The **Backtesting** panel (internal id `stock-backtest`) renders a compact list of backtested results, one row per ticker, showing how previous Stock Analysis signals performed over their horizon.
+
+## What the panel shows
+
+- A row per ticker
+- Percent-change and return figures
+- Freshness state (`live` or `cached`)
+
+Panel id is `stock-backtest`; canonical component is `src/components/StockBacktestPanel.ts`.
+
+## Availability
+
+The panel is enabled in the full and finance variants. It is not included in the tech, commodity, or happy variants.
+
+## API reference
+
+- [Markets service](/api/MarketService.openapi.yaml)
+- Related: [Stock Analysis](/panels/stock-analysis)
