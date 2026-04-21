@@ -401,23 +401,6 @@ export class PanelLayoutManager implements AppModule {
         <div class="panels-grid" id="panelsGrid"></div>
         <button class="search-mobile-fab" id="searchMobileFab" aria-label="Search">\u{1F50D}</button>
       </div>
-      <footer class="site-footer">
-        <div class="site-footer-brand">
-          <img src="/favico/favicon-32x32.png" alt="" width="28" height="28" class="site-footer-icon" />
-          <div class="site-footer-brand-text">
-            <span class="site-footer-name">WORLD MONITOR</span>
-            <span class="site-footer-sub">v${__APP_VERSION__} &middot; <a href="https://x.com/eliehabib" target="_blank" rel="noopener" class="site-footer-credit">@eliehabib</a></span>
-          </div>
-        </div>
-        <nav>
-          <a href="${this.ctx.isDesktopApp ? 'https://threatatlas.app/blog/' : 'https://www.threatatlas.app/blog/'}" target="_blank" rel="noopener">Blog</a>
-          <a href="${this.ctx.isDesktopApp ? 'https://threatatlas.app/docs' : 'https://www.threatatlas.app/docs'}" target="_blank" rel="noopener">Docs</a>
-          <a href="https://status.threatatlas.app/" target="_blank" rel="noopener">Status</a>
-          <a href="https://github.com/hacck3y/threatatlas" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://discord.gg/re63kWKxaz" target="_blank" rel="noopener">Discord</a>
-        </nav>
-        <span class="site-footer-copy">&copy; ${new Date().getFullYear()} ThreatAtlas</span>
-      </footer>
     `;
 
     this.createPanels();
