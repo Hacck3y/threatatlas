@@ -1,5 +1,7 @@
-// Removed Pro/Premium user API key validation
+export interface UserApiKeyValidationResult {
+  userId: string;
+}
 
-export async function validateUserApiKey() {
-  return true;
+export async function validateUserApiKey(_apiKey?: string | null): Promise<UserApiKeyValidationResult | null> {
+  return null;
 }

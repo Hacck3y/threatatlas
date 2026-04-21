@@ -1,0 +1,342 @@
+21:44:26.762 Running build in Washington, D.C., USA (East) – iad1
+21:44:26.763 Build machine configuration: 2 cores, 8 GB
+21:44:26.962 Cloning github.com/Hacck3y/threatatlas (Branch: main, Commit: f6cd346)
+21:44:26.963 Previous build caches not available.
+21:44:28.376 Cloning completed: 1.414s
+21:44:28.763 Found .vercelignore
+21:44:28.800 Removed 4 ignored files defined in .vercelignore
+21:44:28.801   /src-tauri/sidecar/local-api-server.mjs
+21:44:28.801   /src-tauri/sidecar/local-api-server.test.mjs
+21:44:28.801   /src-tauri/sidecar/node/.gitkeep
+21:44:28.801   /src-tauri/sidecar/package.json
+21:44:29.629 Running "vercel build"
+21:44:30.548 Vercel CLI 51.6.1
+21:44:31.751 Running "install" command: `npm install --legacy-peer-deps`...
+21:45:40.444 
+21:45:40.445 > threatatlas@2.6.7 postinstall
+21:45:40.445 > cd blog-site && npm ci --prefer-offline
+21:45:40.445 
+21:45:45.673 
+21:45:45.673 added 294 packages, and audited 296 packages in 5s
+21:45:45.674 
+21:45:45.674 143 packages are looking for funding
+21:45:45.675   run `npm fund` for details
+21:45:45.686 
+21:45:45.687 5 vulnerabilities (2 moderate, 3 high)
+21:45:45.687 
+21:45:45.687 To address all issues, run:
+21:45:45.688   npm audit fix
+21:45:45.688 
+21:45:45.688 Run `npm audit` for details.
+21:45:45.785 
+21:45:45.786 added 1264 packages, and audited 1265 packages in 1m
+21:45:45.786 
+21:45:45.786 222 packages are looking for funding
+21:45:45.786   run `npm fund` for details
+21:45:45.832 
+21:45:45.833 7 vulnerabilities (2 moderate, 5 critical)
+21:45:45.833 
+21:45:45.834 To address issues that do not require attention, run:
+21:45:45.834   npm audit fix
+21:45:45.834 
+21:45:45.834 To address all issues (including breaking changes), run:
+21:45:45.834   npm audit fix --force
+21:45:45.834 
+21:45:45.834 Run `npm audit` for details.
+21:45:46.126 
+21:45:46.126 > threatatlas@2.6.7 build
+21:45:46.127 > npm run build:blog && tsc && vite build
+21:45:46.127 
+21:45:46.236 
+21:45:46.237 > threatatlas@2.6.7 build:blog
+21:45:46.237 > cd blog-site && npm run build && rm -rf ../public/blog && mkdir -p ../public/blog && cp -r dist/* ../public/blog/
+21:45:46.237 
+21:45:46.350 
+21:45:46.351 > blog-site@0.0.1 build
+21:45:46.352 > npm run generate:og && astro build
+21:45:46.353 
+21:45:46.470 
+21:45:46.471 > blog-site@0.0.1 generate:og
+21:45:46.471 > node scripts/generate-og-images.mjs
+21:45:46.471 
+21:45:46.887   gen  ai-powered-intelligence-without-the-cloud.png
+21:45:47.000   gen  build-on-threatatlas-developer-api-open-source.png
+21:45:47.116   gen  command-palette-search-everything-instantly.png
+21:45:47.234   gen  cyber-threat-intelligence-for-security-teams.png
+21:45:47.341   gen  five-dashboards-one-platform-threatatlas-variants.png
+21:45:47.444   gen  live-webcams-from-geopolitical-hotspots.png
+21:45:47.547   gen  monitor-global-supply-chains-and-commodity-disruptions.png
+21:45:47.641   gen  natural-disaster-monitoring-earthquakes-fires-volcanoes.png
+21:45:47.739   gen  osint-for-everyone-open-source-intelligence-democratized.png
+21:45:47.836   gen  prediction-markets-ai-forecasting-geopolitics.png
+21:45:47.933   gen  real-time-market-intelligence-for-traders-and-analysts.png
+21:45:48.027   gen  satellite-imagery-orbital-surveillance.png
+21:45:48.129   gen  threatatlas-in-21-languages-global-intelligence-for-everyone.png
+21:45:48.232   gen  threatatlas-vs-traditional-intelligence-tools.png
+21:45:48.329   gen  track-global-conflicts-in-real-time.png
+21:45:48.427   gen  tracking-global-trade-routes-chokepoints-freight-costs.png
+21:45:48.525   gen  what-is-threatatlas-real-time-global-intelligence.png
+21:45:48.525 
+21:45:48.525 OG images: 17 generated, 0 skipped
+21:45:50.227 [2m16:15:50[22m [34m[content][39m Syncing content
+21:45:51.356 [2m16:15:51[22m [34m[content][39m Synced content
+21:45:51.359 [2m16:15:51[22m [34m[types][39m Generated [2m1.90s[22m
+21:45:51.360 [2m16:15:51[22m [34m[build][39m output: [34m"static"[39m
+21:45:51.360 [2m16:15:51[22m [34m[build][39m mode: [34m"static"[39m
+21:45:51.360 [2m16:15:51[22m [34m[build][39m directory: [34m/vercel/path0/blog-site/dist/[39m
+21:45:51.361 [2m16:15:51[22m [34m[build][39m Collecting build info...
+21:45:51.361 [2m16:15:51[22m [34m[build][39m [32m✓ Completed in 1.92s.[39m
+21:45:51.362 [2m16:15:51[22m [34m[build][39m Building static entrypoints...
+21:45:52.743 [33m[1m16:15:52[22m [WARN] [vite][39m [33m"matchHostname", "matchPathname", "matchPort" and "matchProtocol" are imported from external module "@astrojs/internal-helpers/remote" but never used in "node_modules/astro/dist/assets/utils/index.js".[39m
+21:45:52.872 [2m16:15:52[22m [34m[vite][39m [32m✓ built in 1.46s[39m
+21:45:52.884 [2m16:15:52[22m [34m[vite][39m [32m✓ built in 11ms[39m
+21:45:52.889 [2m16:15:52[22m [34m[build][39m Rearranging server assets...
+21:45:52.902 
+21:45:52.903 [42m[30m generating static routes [39m[49m
+21:45:52.926 [2m16:15:52[22m   [34m├─[39m [2m/posts/ai-powered-intelligence-without-the-cloud/index.html[22m [2m(+11ms)[22m 
+21:45:52.930 [2m16:15:52[22m   [34m├─[39m [2m/posts/build-on-threatatlas-developer-api-open-source/index.html[22m [2m(+3ms)[22m 
+21:45:52.932 [2m16:15:52[22m   [34m├─[39m [2m/posts/command-palette-search-everything-instantly/index.html[22m [2m(+3ms)[22m 
+21:45:52.934 [2m16:15:52[22m   [34m├─[39m [2m/posts/cyber-threat-intelligence-for-security-teams/index.html[22m [2m(+3ms)[22m 
+21:45:52.937 [2m16:15:52[22m   [34m├─[39m [2m/posts/five-dashboards-one-platform-threatatlas-variants/index.html[22m [2m(+3ms)[22m 
+21:45:52.941 [2m16:15:52[22m   [34m├─[39m [2m/posts/live-webcams-from-geopolitical-hotspots/index.html[22m [2m(+4ms)[22m 
+21:45:52.944 [2m16:15:52[22m   [34m├─[39m [2m/posts/monitor-global-supply-chains-and-commodity-disruptions/index.html[22m [2m(+3ms)[22m 
+21:45:52.947 [2m16:15:52[22m   [34m├─[39m [2m/posts/natural-disaster-monitoring-earthquakes-fires-volcanoes/index.html[22m [2m(+3ms)[22m 
+21:45:52.950 [2m16:15:52[22m   [34m├─[39m [2m/posts/osint-for-everyone-open-source-intelligence-democratized/index.html[22m [2m(+3ms)[22m 
+21:45:52.952 [2m16:15:52[22m   [34m├─[39m [2m/posts/prediction-markets-ai-forecasting-geopolitics/index.html[22m [2m(+3ms)[22m 
+21:45:52.954 [2m16:15:52[22m   [34m├─[39m [2m/posts/real-time-market-intelligence-for-traders-and-analysts/index.html[22m [2m(+2ms)[22m 
+21:45:52.956 [2m16:15:52[22m   [34m├─[39m [2m/posts/satellite-imagery-orbital-surveillance/index.html[22m [2m(+2ms)[22m 
+21:45:52.958 [2m16:15:52[22m   [34m├─[39m [2m/posts/threatatlas-in-21-languages-global-intelligence-for-everyone/index.html[22m [2m(+2ms)[22m 
+21:45:52.960 [2m16:15:52[22m   [34m├─[39m [2m/posts/threatatlas-vs-traditional-intelligence-tools/index.html[22m [2m(+2ms)[22m 
+21:45:52.962 [2m16:15:52[22m   [34m├─[39m [2m/posts/track-global-conflicts-in-real-time/index.html[22m [2m(+2ms)[22m 
+21:45:52.963 [2m16:15:52[22m   [34m├─[39m [2m/posts/tracking-global-trade-routes-chokepoints-freight-costs/index.html[22m [2m(+2ms)[22m 
+21:45:52.965 [2m16:15:52[22m   [34m├─[39m [2m/posts/what-is-threatatlas-real-time-global-intelligence/index.html[22m [2m(+1ms)[22m 
+21:45:53.011 [2m16:15:52[22m   [34m├─[39m [2m/rss.xml[22m [2m(+35ms)[22m 
+21:45:53.015 [2m16:15:53[22m   [34m├─[39m [2m/index.html[22m [2m(+15ms)[22m 
+21:45:53.016 [2m16:15:53[22m [32m✓ Completed in 125ms.
+21:45:53.016 [39m
+21:45:53.025 [2m16:15:53[22m [34m[build][39m [32m✓ Completed in 1.66s.[39m
+21:45:53.083 [2m16:15:53[22m [34m[@astrojs/sitemap][39m `sitemap-index.xml` created at `dist`
+21:45:53.083 [2m16:15:53[22m [34m[build][39m 18 page(s) built in [1m3.63s[22m
+21:45:53.084 [2m16:15:53[22m [34m[build][39m [1mComplete![22m
+21:46:08.005 [36mvite v6.4.2 [32mbuilding for production...[36m[39m
+21:46:08.108 transforming...
+21:46:32.986 [32m✓[39m 2605 modules transformed.
+21:46:34.572 rendering chunks...
+21:46:37.989 [33m[plugin vite:reporter] 
+21:46:37.990 (!) /vercel/path0/src/services/clerk.ts is dynamically imported by /vercel/path0/src/services/premium-fetch.ts but also statically imported by /vercel/path0/src/components/LatestBriefPanel.ts, /vercel/path0/src/components/ResilienceWidget.ts, /vercel/path0/src/components/WidgetChatModal.ts, /vercel/path0/src/services/auth-state.ts, /vercel/path0/src/services/breaking-news-alerts.ts, /vercel/path0/src/services/convex-client.ts, /vercel/path0/src/services/notification-channels.ts, /vercel/path0/src/services/notifications-settings.ts, /vercel/path0/src/services/push-notifications.ts, /vercel/path0/src/services/referral.ts, /vercel/path0/src/services/runtime.ts, /vercel/path0/src/services/trade/index.ts, /vercel/path0/src/utils/cloud-prefs-sync.ts, dynamic import will not move module into another chunk.
+21:46:37.990 [39m
+21:46:38.000 [33m[plugin vite:reporter] 
+21:46:38.001 (!) /vercel/path0/src/services/runtime.ts is dynamically imported by /vercel/path0/src/services/supply-chain/index.ts, /vercel/path0/src/services/supply-chain/index.ts but also statically imported by /vercel/path0/src/App.ts, /vercel/path0/src/app/country-intel.ts, /vercel/path0/src/app/data-loader.ts, /vercel/path0/src/app/event-handlers.ts, /vercel/path0/src/app/refresh-scheduler.ts, /vercel/path0/src/components/AAIISentimentPanel.ts, /vercel/path0/src/components/CountersPanel.ts, /vercel/path0/src/components/CountryDeepDivePanel.ts, /vercel/path0/src/components/EconomicPanel.ts, /vercel/path0/src/components/GlobeMap.ts, /vercel/path0/src/components/GoldIntelligencePanel.ts, /vercel/path0/src/components/InsightsPanel.ts, /vercel/path0/src/components/LiveNewsPanel.ts, /vercel/path0/src/components/LiveWebcamsPanel.ts, /vercel/path0/src/components/Map.ts, /vercel/path0/src/components/OilInventoriesPanel.ts, /vercel/path0/src/components/Panel.ts, /vercel/path0/src/components/RuntimeConfigPanel.ts, /vercel/path0/src/components/StrategicPosturePanel.ts, /vercel/path0/src/components/SupplyChainPanel.ts, /vercel/path0/src/components/TechEventsPanel.ts, /vercel/path0/src/components/TradePolicyPanel.ts, /vercel/path0/src/components/WsbTickerScannerPanel.ts, /vercel/path0/src/config/map-layer-definitions.ts, /vercel/path0/src/config/panels.ts, /vercel/path0/src/live-channels-window.ts, /vercel/path0/src/main.ts, /vercel/path0/src/services/bootstrap.ts, /vercel/path0/src/services/breaking-news-alerts.ts, /vercel/path0/src/services/conflict/index.ts, /vercel/path0/src/services/economic/index.ts, /vercel/path0/src/services/gps-interference.ts, /vercel/path0/src/services/hormuz-tracker.ts, /vercel/path0/src/services/imagery.ts, /vercel/path0/src/services/imf-country-data.ts, /vercel/path0/src/services/live-news.ts, /vercel/path0/src/services/maritime/index.ts, /vercel/path0/src/services/market-implications.ts, /vercel/path0/src/services/meta-tags.ts, /vercel/path0/src/services/military-flights.ts, /vercel/path0/src/services/oref-alerts.ts, /vercel/path0/src/services/persistent-cache.ts, /vercel/path0/src/services/progress-data.ts, /vercel/path0/src/services/renewable-energy-data.ts, /vercel/path0/src/services/rpc-client.ts, /vercel/path0/src/services/runtime-config.ts, /vercel/path0/src/services/satellites.ts, /vercel/path0/src/services/story-share.ts, /vercel/path0/src/services/telegram-intel.ts, /vercel/path0/src/services/usa-spending.ts, /vercel/path0/src/services/weather.ts, /vercel/path0/src/settings-main.ts, /vercel/path0/src/settings-window.ts, /vercel/path0/src/utils/cloud-prefs-sync.ts, /vercel/path0/src/utils/proxy.ts, /vercel/path0/src/utils/reverse-geocode.ts, /vercel/path0/src/utils/user-location.ts, dynamic import will not move module into another chunk.
+21:46:38.001 [39m
+21:46:38.002 [33m[plugin vite:reporter] 
+21:46:38.002 (!) /vercel/path0/src/services/tauri-bridge.ts is dynamically imported by /vercel/path0/src/components/LiveNewsPanel.ts, /vercel/path0/src/services/runtime.ts, /vercel/path0/src/services/runtime.ts, /vercel/path0/src/services/runtime.ts but also statically imported by /vercel/path0/src/app/desktop-updater.ts, /vercel/path0/src/app/event-handlers.ts, /vercel/path0/src/components/Panel.ts, /vercel/path0/src/components/RuntimeConfigPanel.ts, /vercel/path0/src/services/persistent-cache.ts, /vercel/path0/src/services/runtime-config.ts, /vercel/path0/src/settings-main.ts, dynamic import will not move module into another chunk.
+21:46:38.002 [39m
+21:46:38.003 [33m[plugin vite:reporter] 
+21:46:38.003 (!) /vercel/path0/src/services/persistent-cache.ts is dynamically imported by /vercel/path0/src/services/daily-market-brief.ts, /vercel/path0/src/utils/circuit-breaker.ts, /vercel/path0/src/utils/circuit-breaker.ts, /vercel/path0/src/utils/circuit-breaker.ts, /vercel/path0/src/utils/circuit-breaker.ts but also statically imported by /vercel/path0/src/App.ts, /vercel/path0/src/app/data-loader.ts, /vercel/path0/src/components/DailyMarketBriefPanel.ts, /vercel/path0/src/components/InsightsPanel.ts, /vercel/path0/src/components/MarketImplicationsPanel.ts, /vercel/path0/src/services/bootstrap.ts, /vercel/path0/src/services/rss.ts, /vercel/path0/src/utils/proxy.ts, dynamic import will not move module into another chunk.
+21:46:38.003 [39m
+21:46:38.009 [33m[plugin vite:reporter] 
+21:46:38.010 (!) /vercel/path0/src/services/runtime-config.ts is dynamically imported by /vercel/path0/src/services/premium-fetch.ts, /vercel/path0/src/services/runtime.ts, /vercel/path0/src/services/runtime.ts, /vercel/path0/src/services/runtime.ts but also statically imported by /vercel/path0/src/app/data-loader.ts, /vercel/path0/src/components/EconomicPanel.ts, /vercel/path0/src/components/GlobeMap.ts, /vercel/path0/src/components/MapPopup.ts, /vercel/path0/src/components/Panel.ts, /vercel/path0/src/components/RuntimeConfigPanel.ts, /vercel/path0/src/components/SupplyChainPanel.ts, /vercel/path0/src/components/TradePolicyPanel.ts, /vercel/path0/src/config/panels.ts, /vercel/path0/src/main.ts, /vercel/path0/src/services/economic/index.ts, /vercel/path0/src/services/infrastructure/index.ts, /vercel/path0/src/services/maritime/index.ts, /vercel/path0/src/services/military-flights.ts, /vercel/path0/src/services/settings-manager.ts, /vercel/path0/src/services/summarization.ts, /vercel/path0/src/services/trade/index.ts, /vercel/path0/src/services/wingbits.ts, /vercel/path0/src/settings-main.ts, dynamic import will not move module into another chunk.
+21:46:38.010 [39m
+21:46:38.028 [33m[plugin vite:reporter] 
+21:46:38.029 (!) /vercel/path0/src/services/rpc-client.ts is dynamically imported by /vercel/path0/src/app/data-loader.ts, /vercel/path0/src/app/data-loader.ts, /vercel/path0/src/components/CotPositioningPanel.ts, /vercel/path0/src/components/EarningsCalendarPanel.ts, /vercel/path0/src/components/EconomicCalendarPanel.ts, /vercel/path0/src/components/FSIPanel.ts, /vercel/path0/src/components/FSIPanel.ts, /vercel/path0/src/components/FearGreedPanel.ts, /vercel/path0/src/components/LiquidityShiftsPanel.ts, /vercel/path0/src/components/MacroTilesPanel.ts, /vercel/path0/src/components/MarketBreadthPanel.ts, /vercel/path0/src/components/PositioningPanel.ts, /vercel/path0/src/components/YieldCurvePanel.ts but also statically imported by /vercel/path0/src/app/country-intel.ts, /vercel/path0/src/app/data-loader.ts, /vercel/path0/src/components/BigMacPanel.ts, /vercel/path0/src/components/ClimateNewsPanel.ts, /vercel/path0/src/components/DeductionPanel.ts, /vercel/path0/src/components/DefensePatentsPanel.ts, /vercel/path0/src/components/ETFFlowsPanel.ts, /vercel/path0/src/components/EnergyCrisisPanel.ts, /vercel/path0/src/components/FaoFoodPriceIndexPanel.ts, /vercel/path0/src/components/FuelPricesPanel.ts, /vercel/path0/src/components/GroceryBasketPanel.ts, /vercel/path0/src/components/GulfEconomiesPanel.ts, /vercel/path0/src/components/MacroSignalsPanel.ts, /vercel/path0/src/components/RegionalIntelligenceBoard.ts, /vercel/path0/src/components/StablecoinPanel.ts, /vercel/path0/src/components/TechEventsPanel.ts, /vercel/path0/src/services/aviation/index.ts, /vercel/path0/src/services/cable-activity.ts, /vercel/path0/src/services/cable-health.ts, /vercel/path0/src/services/cached-risk-scores.ts, /vercel/path0/src/services/cached-theater-posture.ts, /vercel/path0/src/services/climate/index.ts, /vercel/path0/src/services/conflict/index.ts, /vercel/path0/src/services/consumer-prices/index.ts, /vercel/path0/src/services/cross-source-signals.ts, /vercel/path0/src/services/cyber/index.ts, /vercel/path0/src/services/disease-outbreaks.ts, /vercel/path0/src/services/displacement/index.ts, /vercel/path0/src/services/earthquakes.ts, /vercel/path0/src/services/economic/index.ts, /vercel/path0/src/services/eonet.ts, /vercel/path0/src/services/forecast.ts, /vercel/path0/src/services/gdelt-intel.ts, /vercel/path0/src/services/giving/index.ts, /vercel/path0/src/services/infrastructure/index.ts, /vercel/path0/src/services/insider-transactions.ts, /vercel/path0/src/services/maritime/index.ts, /vercel/path0/src/services/market/index.ts, /vercel/path0/src/services/military-bases.ts, /vercel/path0/src/services/pizzint.ts, /vercel/path0/src/services/positive-events-geo.ts, /vercel/path0/src/services/prediction/index.ts, /vercel/path0/src/services/radiation.ts, /vercel/path0/src/services/research/index.ts, /vercel/path0/src/services/resilience.ts, /vercel/path0/src/services/sanctions-pressure.ts, /vercel/path0/src/services/security-advisories.ts, /vercel/path0/src/services/social-velocity.ts, /vercel/path0/src/services/stock-analysis-history.ts, /vercel/path0/src/services/stock-analysis.ts, /vercel/path0/src/services/stock-backtest.ts, /vercel/path0/src/services/summarization.ts, /vercel/path0/src/services/supply-chain/index.ts, /vercel/path0/src/services/temporal-baseline.ts, /vercel/path0/src/services/thermal-escalation.ts, /vercel/path0/src/services/threat-classifier.ts, /vercel/path0/src/services/trade/index.ts, /vercel/path0/src/services/unrest/index.ts, /vercel/path0/src/services/usni-fleet.ts, /vercel/path0/src/services/webcams/index.ts, /vercel/path0/src/services/wildfires/index.ts, /vercel/path0/src/services/wingbits.ts, dynamic import will not move module into another chunk.
+21:46:38.029 [39m
+21:46:38.030 [33m[plugin vite:reporter] 
+21:46:38.030 (!) /vercel/path0/src/services/summarization.ts is dynamically imported by /vercel/path0/src/services/daily-market-brief.ts but also statically imported by /vercel/path0/src/components/GoodThingsDigestPanel.ts, /vercel/path0/src/components/InsightsPanel.ts, /vercel/path0/src/services/index.ts, /vercel/path0/src/services/oref-alerts.ts, /vercel/path0/src/services/trending-keywords.ts, dynamic import will not move module into another chunk.
+21:46:38.030 [39m
+21:46:38.031 [33m[plugin vite:reporter] 
+21:46:38.031 (!) /vercel/path0/src/generated/client/threatatlas/market/v1/service_client.ts is dynamically imported by /vercel/path0/src/app/data-loader.ts, /vercel/path0/src/components/CotPositioningPanel.ts, /vercel/path0/src/components/EarningsCalendarPanel.ts, /vercel/path0/src/components/FSIPanel.ts, /vercel/path0/src/components/FearGreedPanel.ts, /vercel/path0/src/components/LiquidityShiftsPanel.ts, /vercel/path0/src/components/MarketBreadthPanel.ts, /vercel/path0/src/components/PositioningPanel.ts but also statically imported by /vercel/path0/src/app/country-intel.ts, /vercel/path0/src/components/ETFFlowsPanel.ts, /vercel/path0/src/components/GulfEconomiesPanel.ts, /vercel/path0/src/components/StablecoinPanel.ts, /vercel/path0/src/services/insider-transactions.ts, /vercel/path0/src/services/market/index.ts, /vercel/path0/src/services/stock-analysis-history.ts, /vercel/path0/src/services/stock-analysis.ts, /vercel/path0/src/services/stock-backtest.ts, dynamic import will not move module into another chunk.
+21:46:38.031 [39m
+21:46:38.039 [33m[plugin vite:reporter] 
+21:46:38.039 (!) /vercel/path0/src/generated/client/threatatlas/economic/v1/service_client.ts is dynamically imported by /vercel/path0/src/app/data-loader.ts, /vercel/path0/src/app/data-loader.ts, /vercel/path0/src/components/EconomicCalendarPanel.ts, /vercel/path0/src/components/FSIPanel.ts, /vercel/path0/src/components/MacroTilesPanel.ts, /vercel/path0/src/components/YieldCurvePanel.ts but also statically imported by /vercel/path0/src/app/country-intel.ts, /vercel/path0/src/components/BigMacPanel.ts, /vercel/path0/src/components/EnergyCrisisPanel.ts, /vercel/path0/src/components/FaoFoodPriceIndexPanel.ts, /vercel/path0/src/components/FuelPricesPanel.ts, /vercel/path0/src/components/GroceryBasketPanel.ts, /vercel/path0/src/components/MacroSignalsPanel.ts, /vercel/path0/src/services/economic/index.ts, dynamic import will not move module into another chunk.
+21:46:38.040 [39m
+21:46:38.041 [33m[plugin vite:reporter] 
+21:46:38.041 (!) /vercel/path0/src/services/premium-fetch.ts is dynamically imported by /vercel/path0/src/services/supply-chain/index.ts, /vercel/path0/src/services/supply-chain/index.ts but also statically imported by /vercel/path0/src/app/country-intel.ts, /vercel/path0/src/components/ChatAnalystPanel.ts, /vercel/path0/src/components/DeductionPanel.ts, /vercel/path0/src/components/RegionalIntelligenceBoard.ts, /vercel/path0/src/components/SupplyChainPanel.ts, /vercel/path0/src/services/insider-transactions.ts, /vercel/path0/src/services/stock-analysis-history.ts, /vercel/path0/src/services/stock-analysis.ts, /vercel/path0/src/services/stock-backtest.ts, /vercel/path0/src/services/trade/index.ts, dynamic import will not move module into another chunk.
+21:46:38.041 [39m
+21:46:38.068 [33m[plugin vite:reporter] 
+21:46:38.068 (!) /vercel/path0/src/services/widget-store.ts is dynamically imported by /vercel/path0/src/services/premium-fetch.ts, /vercel/path0/src/services/runtime.ts but also statically imported by /vercel/path0/src/App.ts, /vercel/path0/src/app/event-handlers.ts, /vercel/path0/src/app/panel-layout.ts, /vercel/path0/src/app/search-manager.ts, /vercel/path0/src/components/McpDataPanel.ts, /vercel/path0/src/components/WidgetChatModal.ts, /vercel/path0/src/settings-window.ts, dynamic import will not move module into another chunk.
+21:46:38.068 [39m
+21:46:40.116 [33m[plugin vite:reporter] 
+21:46:40.116 (!) /vercel/path0/src/services/webcams/index.ts is dynamically imported by /vercel/path0/src/app/data-loader.ts, /vercel/path0/src/components/GlobeMap.ts, /vercel/path0/src/components/GlobeMap.ts, /vercel/path0/src/components/Map.ts, /vercel/path0/src/components/Map.ts but also statically imported by /vercel/path0/src/components/DeckGLMap.ts, /vercel/path0/src/components/GlobeMap.ts, dynamic import will not move module into another chunk.
+21:46:40.117 [39m
+21:46:40.117 [33m[plugin vite:reporter] 
+21:46:40.118 (!) /vercel/path0/node_modules/three/build/three.module.js is dynamically imported by /vercel/path0/src/components/GlobeMap.ts, /vercel/path0/src/components/GlobeMap.ts but also statically imported by /vercel/path0/node_modules/globe.gl/dist/globe.gl.mjs, /vercel/path0/node_modules/three-conic-polygon-geometry/dist/three-conic-polygon-geometry.mjs, /vercel/path0/node_modules/three-geojson-geometry/dist/three-geojson-geometry.mjs, /vercel/path0/node_modules/three-globe/dist/three-globe.mjs, /vercel/path0/node_modules/three-render-objects/dist/three-render-objects.mjs, /vercel/path0/node_modules/three-slippy-map-globe/dist/three-slippy-map-globe.mjs, /vercel/path0/node_modules/three/examples/jsm/controls/FlyControls.js, /vercel/path0/node_modules/three/examples/jsm/controls/OrbitControls.js, /vercel/path0/node_modules/three/examples/jsm/controls/TrackballControls.js, /vercel/path0/node_modules/three/examples/jsm/geometries/TextGeometry.js, /vercel/path0/node_modules/three/examples/jsm/lines/LineMaterial.js, /vercel/path0/node_modules/three/examples/jsm/lines/LineSegments2.js, /vercel/path0/node_modules/three/examples/jsm/lines/LineSegmentsGeometry.js, /vercel/path0/node_modules/three/examples/jsm/loaders/FontLoader.js, /vercel/path0/node_modules/three/examples/jsm/postprocessing/EffectComposer.js, /vercel/path0/node_modules/three/examples/jsm/postprocessing/Pass.js, /vercel/path0/node_modules/three/examples/jsm/postprocessing/RenderPass.js, /vercel/path0/node_modules/three/examples/jsm/postprocessing/ShaderPass.js, /vercel/path0/node_modules/three/examples/jsm/renderers/CSS2DRenderer.js, /vercel/path0/node_modules/three/examples/jsm/utils/BufferGeometryUtils.js, dynamic import will not move module into another chunk.
+21:46:40.118 [39m
+21:46:40.282 computing gzip size...
+21:46:58.002 [2mdist/[22m[32mmanifest.webmanifest                          [39m[1m[2m    0.73 kB[22m[1m[22m
+21:46:58.003 [2mdist/[22m[32mlive-channels.html                            [39m[1m[2m    1.53 kB[22m[1m[22m[2m │ gzip:     0.69 kB[22m
+21:46:58.003 [2mdist/[22m[32msettings.html                                 [39m[1m[2m    3.15 kB[22m[1m[22m[2m │ gzip:     1.31 kB[22m
+21:46:58.003 [2mdist/[22m[32mindex.html                                    [39m[1m[2m   23.46 kB[22m[1m[22m[2m │ gzip:     5.65 kB[22m
+21:46:58.003 [2mdist/[22m[2massets/[22m[32manalysis.worker-CTmk--zY.js            [39m[1m[2m   77.26 kB[22m[1m[22m
+21:46:58.003 [2mdist/[22m[2massets/[22m[32mml.worker-DNHFpHAV.js                  [39m[1m[2m  824.29 kB[22m[1m[22m
+21:46:58.003 [2mdist/[22m[2massets/[22m[35msettings-persistence-CCxf_ZvB.css      [39m[1m[2m   23.52 kB[22m[1m[22m[2m │ gzip:     4.53 kB[22m
+21:46:58.003 [2mdist/[22m[2massets/[22m[35mmaplibre-B46vZ9Yf.css                  [39m[1m[2m   69.94 kB[22m[1m[22m[2m │ gzip:    10.06 kB[22m
+21:46:58.003 [2mdist/[22m[2massets/[22m[35mmain-D-y5ZjDc.css                      [39m[1m[2m  396.23 kB[22m[1m[22m[2m │ gzip:    65.45 kB[22m
+21:46:58.003 [2mdist/[22m[2massets/[22m[35mmain-NwzrE9zy.css                      [39m[1m[2m  449.91 kB[22m[1m[22m[2m │ gzip:    74.63 kB[22m
+21:46:58.003 [2mdist/[22m[2massets/[22m[36mliveChannels-DKfVa8cp.js               [39m[1m[2m    0.37 kB[22m[1m[22m[2m │ gzip:     0.27 kB[22m
+21:46:58.003 [2mdist/[22m[2massets/[22m[36mmodulepreload-polyfill-B5Qt9EMX.js     [39m[1m[2m    0.71 kB[22m[1m[22m[2m │ gzip:     0.40 kB[22m
+21:46:58.003 [2mdist/[22m[2massets/[22m[36mapi-DslJxY5K.js                        [39m[1m[2m    1.05 kB[22m[1m[22m[2m │ gzip:     0.54 kB[22m
+21:46:58.003 [2mdist/[22m[2massets/[22m[36mreferral-hnuMswD8.js                   [39m[1m[2m    1.44 kB[22m[1m[22m[2m │ gzip:     0.74 kB[22m
+21:46:58.003 [2mdist/[22m[2massets/[22m[36mworld-happiness-BxMJ6f_1.js            [39m[1m[2m    1.48 kB[22m[1m[22m[2m │ gzip:     0.84 kB[22m
+21:46:58.005 [2mdist/[22m[2massets/[22m[36mtopojson-BwRznoQ3.js                   [39m[1m[2m    1.56 kB[22m[1m[22m[2m │ gzip:     0.72 kB[22m
+21:46:58.005 [2mdist/[22m[2massets/[22m[36msettings-window-i2w0hrPJ.js            [39m[1m[2m    2.06 kB[22m[1m[22m[2m │ gzip:     0.99 kB[22m
+21:46:58.005 [2mdist/[22m[2massets/[22m[36msettings-persistence-Cra07ror.js       [39m[1m[2m    2.69 kB[22m[1m[22m[2m │ gzip:     1.31 kB[22m
+21:46:58.005 [2mdist/[22m[2massets/[22m[36mpush-notifications-BWxECuwX.js         [39m[1m[2m    2.88 kB[22m[1m[22m[2m │ gzip:     1.29 kB[22m
+21:46:58.005 [2mdist/[22m[2massets/[22m[36muser-location-nrS3Kg7P.js              [39m[1m[2m    3.91 kB[22m[1m[22m[2m │ gzip:     1.73 kB[22m
+21:46:58.005 [2mdist/[22m[2massets/[22m[36mconservation-wins-n0S2OTZQ.js          [39m[1m[2m    9.03 kB[22m[1m[22m[2m │ gzip:     2.80 kB[22m
+21:46:58.005 [2mdist/[22m[2massets/[22m[36mlive-channels-window-QTKP05mz.js       [39m[1m[2m   14.41 kB[22m[1m[22m[2m │ gzip:     4.45 kB[22m
+21:46:58.005 [2mdist/[22m[2massets/[22m[36mrenewable-installations-CuB42DHj.js    [39m[1m[2m   15.01 kB[22m[1m[22m[2m │ gzip:     3.12 kB[22m
+21:46:58.005 [2mdist/[22m[2massets/[22m[36mRegionalIntelligenceBoard-By2LJLxO.js  [39m[1m[2m   15.16 kB[22m[1m[22m[2m │ gzip:     4.53 kB[22m
+21:46:58.005 [2mdist/[22m[2massets/[22m[36msettings-DXu23SPd.js                   [39m[1m[2m   27.74 kB[22m[1m[22m[2m │ gzip:     8.92 kB[22m
+21:46:58.005 [2mdist/[22m[2massets/[22m[36mRouteExplorer-GIBHiABL.js              [39m[1m[2m   44.12 kB[22m[1m[22m[2m │ gzip:    11.46 kB[22m
+21:46:58.005 [2mdist/[22m[2massets/[22m[36moref-locations-EKm8gxKt.js             [39m[1m[2m   46.76 kB[22m[1m[22m[2m │ gzip:    16.79 kB[22m
+21:46:58.006 [2mdist/[22m[2massets/[22m[36mi18n-qlunRAMb.js                       [39m[1m[2m   52.46 kB[22m[1m[22m[2m │ gzip:    16.61 kB[22m
+21:46:58.006 [2mdist/[22m[2massets/[22m[36msentry-DSAq1eV6.js                     [39m[1m[2m   80.40 kB[22m[1m[22m[2m │ gzip:    27.57 kB[22m
+21:46:58.006 [2mdist/[22m[2massets/[22m[36mlocale-zh-jqGZudzx.js                  [39m[1m[2m   80.94 kB[22m[1m[22m[2m │ gzip:    33.29 kB[22m
+21:46:58.006 [2mdist/[22m[2massets/[22m[36mlocale-sv-xKcDY3OW.js                  [39m[1m[2m   88.48 kB[22m[1m[22m[2m │ gzip:    33.88 kB[22m
+21:46:58.006 [2mdist/[22m[2massets/[22m[36mlocale-tr-zhSdC52_.js                  [39m[1m[2m   89.97 kB[22m[1m[22m[2m │ gzip:    34.14 kB[22m
+21:46:58.006 [2mdist/[22m[2massets/[22m[36mlocale-ko-Ckbz--5G.js                  [39m[1m[2m   90.51 kB[22m[1m[22m[2m │ gzip:    33.40 kB[22m
+21:46:58.006 [2mdist/[22m[2massets/[22m[36mlocale-nl-CnYgJSd5.js                  [39m[1m[2m   90.85 kB[22m[1m[22m[2m │ gzip:    34.11 kB[22m
+21:46:58.006 [2mdist/[22m[2massets/[22m[36mlocale-de-Da8EqhTw.js                  [39m[1m[2m   92.82 kB[22m[1m[22m[2m │ gzip:    34.45 kB[22m
+21:46:58.006 [2mdist/[22m[2massets/[22m[36mlocale-it-Bwt0f_E0.js                  [39m[1m[2m   93.61 kB[22m[1m[22m[2m │ gzip:    33.88 kB[22m
+21:46:58.006 [2mdist/[22m[2massets/[22m[36mlocale-cs-wW67jYxp.js                  [39m[1m[2m   94.50 kB[22m[1m[22m[2m │ gzip:    35.33 kB[22m
+21:46:58.006 [2mdist/[22m[2massets/[22m[36mlocale-pt-BQDAgiDS.js                  [39m[1m[2m   94.67 kB[22m[1m[22m[2m │ gzip:    34.74 kB[22m
+21:46:58.006 [2mdist/[22m[2massets/[22m[36mlocale-pl-DfpSdnuc.js                  [39m[1m[2m   94.75 kB[22m[1m[22m[2m │ gzip:    36.07 kB[22m
+21:46:58.006 [2mdist/[22m[2massets/[22m[36mlocale-ro-CW92L75G.js                  [39m[1m[2m   94.76 kB[22m[1m[22m[2m │ gzip:    34.17 kB[22m
+21:46:58.006 [2mdist/[22m[2massets/[22m[36mlocale-ja-kls6iA5J.js                  [39m[1m[2m   94.89 kB[22m[1m[22m[2m │ gzip:    35.23 kB[22m
+21:46:58.006 [2mdist/[22m[2massets/[22m[36mlocale-es-D4L0HVD2.js                  [39m[1m[2m   95.55 kB[22m[1m[22m[2m │ gzip:    34.38 kB[22m
+21:46:58.006 [2mdist/[22m[2massets/[22m[36mlocale-fr-Cec-gLe-.js                  [39m[1m[2m   97.40 kB[22m[1m[22m[2m │ gzip:    34.92 kB[22m
+21:46:58.006 [2mdist/[22m[2massets/[22m[36mlocale-vi-D-pbtwIT.js                  [39m[1m[2m  102.85 kB[22m[1m[22m[2m │ gzip:    34.15 kB[22m
+21:46:58.006 [2mdist/[22m[2massets/[22m[36mlocale-ar-DaeZ14Ep.js                  [39m[1m[2m  113.02 kB[22m[1m[22m[2m │ gzip:    35.57 kB[22m
+21:46:58.006 [2mdist/[22m[2massets/[22m[36md3-A6Y4oGMQ.js                         [39m[1m[2m  128.77 kB[22m[1m[22m[2m │ gzip:    44.82 kB[22m
+21:46:58.006 [2mdist/[22m[2massets/[22m[36mlocale-ru-CJeMisnh.js                  [39m[1m[2m  133.16 kB[22m[1m[22m[2m │ gzip:    40.71 kB[22m
+21:46:58.006 [2mdist/[22m[2massets/[22m[36mlocale-bg-CtV3osY-.js                  [39m[1m[2m  134.63 kB[22m[1m[22m[2m │ gzip:    39.68 kB[22m
+21:46:58.007 [2mdist/[22m[2massets/[22m[36mlocale-el-DyhSLGi8.js                  [39m[1m[2m  136.16 kB[22m[1m[22m[2m │ gzip:    40.99 kB[22m
+21:46:58.007 [2mdist/[22m[2massets/[22m[36mlocale-th-BVIW-8lK.js                  [39m[1m[2m  161.71 kB[22m[1m[22m[2m │ gzip:    37.88 kB[22m
+21:46:58.007 [2mdist/[22m[2massets/[22m[36mhls-jw_vZdHi.js                        [39m[1m[2m  523.81 kB[22m[1m[22m[2m │ gzip:   162.06 kB[22m
+21:46:58.007 [2mdist/[22m[2massets/[22m[36mdeck-stack-M7VGzMEt.js                 [39m[1m[2m1,047.88 kB[22m[1m[22m[2m │ gzip:   287.25 kB[22m
+21:46:58.007 [2mdist/[22m[2massets/[22m[36mmaplibre-sUoyH2sB.js                   [39m[1m[2m1,106.78 kB[22m[1m[22m[2m │ gzip:   297.70 kB[22m
+21:46:58.007 [2mdist/[22m[2massets/[22m[36mpanels-EJYYkqXF.js                     [39m[1m[33m2,248.63 kB[39m[22m[2m │ gzip:   598.92 kB[22m
+21:46:58.007 [2mdist/[22m[2massets/[22m[36mmain-BXk5HuX6.js                       [39m[1m[33m2,798.93 kB[39m[22m[2m │ gzip:   764.45 kB[22m
+21:46:58.007 [2mdist/[22m[2massets/[22m[36mclerk-DC7Q2aDh.js                      [39m[1m[33m3,053.14 kB[39m[22m[2m │ gzip: 1,010.88 kB[22m
+21:46:58.015 [33m
+21:46:58.016 (!) Some chunks are larger than 1200 kB after minification. Consider:
+21:46:58.016 - Using dynamic import() to code-split the application
+21:46:58.016 - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+21:46:58.016 - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
+21:47:08.318 [32m✓ built in 1m[39m
+21:47:12.894 
+21:47:12.894 PWA v1.2.0
+21:47:12.894 mode      generateSW
+21:47:12.894 precache  91 entries (14919.60 KiB)
+21:47:12.894 files generated
+21:47:12.895   dist/sw.js
+21:47:12.895   dist/workbox-93ff2988.js
+21:47:13.178 Installing dependencies...
+21:47:48.909 
+21:47:48.910 > threatatlas@2.6.7 postinstall
+21:47:48.910 > cd blog-site && npm ci --prefer-offline
+21:47:48.910 
+21:47:53.079 
+21:47:53.079 added 294 packages, and audited 296 packages in 4s
+21:47:53.080 
+21:47:53.081 143 packages are looking for funding
+21:47:53.081   run `npm fund` for details
+21:47:53.093 
+21:47:53.094 5 vulnerabilities (2 moderate, 3 high)
+21:47:53.094 
+21:47:53.095 To address all issues, run:
+21:47:53.095   npm audit fix
+21:47:53.095 
+21:47:53.095 Run `npm audit` for details.
+21:47:53.155 
+21:47:53.156 added 326 packages, and changed 2 packages in 40s
+21:47:53.156 
+21:47:53.156 243 packages are looking for funding
+21:47:53.157   run `npm fund` for details
+21:47:53.523 Using TypeScript 5.9.3 (local user-provided)
+21:48:02.856 Using TypeScript 5.9.3 (local user-provided)
+21:48:03.428 Using TypeScript 5.9.3 (local user-provided)
+21:48:04.191 api/discord/oauth/start.ts(17,10): error TS2305: Module '"../../../server/_shared/entitlement-check"' has no exported member 'getEntitlements'.
+21:48:04.192 
+21:48:04.537 Using TypeScript 5.9.3 (local user-provided)
+21:48:05.240 Using TypeScript 5.9.3 (local user-provided)
+21:48:05.560 Using TypeScript 5.9.3 (local user-provided)
+21:48:05.878 Using TypeScript 5.9.3 (local user-provided)
+21:48:06.279 Using TypeScript 5.9.3 (local user-provided)
+21:48:06.599 api/slack/oauth/start.ts(17,10): error TS2305: Module '"../../../server/_shared/entitlement-check"' has no exported member 'getEntitlements'.
+21:48:06.599 
+21:48:06.763 Using TypeScript 5.9.3 (local user-provided)
+21:48:07.088 Using TypeScript 5.9.3 (local user-provided)
+21:48:08.004 Using TypeScript 5.9.3 (local user-provided)
+21:48:08.664 api/v2/shipping/route-intelligence.ts(60,52): error TS2554: Expected 0 arguments, but got 1.
+21:48:08.664 
+21:48:08.915 Using TypeScript 5.9.3 (local user-provided)
+21:48:09.353 Using TypeScript 5.9.3 (local user-provided)
+21:48:10.229 server/gateway.ts(286,41): error TS2554: Expected 0 arguments, but got 1.
+21:48:10.229 server/gateway.ts(322,54): error TS2554: Expected 0 arguments, but got 1.
+21:48:10.229 server/gateway.ts(328,41): error TS2339: Property 'userId' does not exist on type 'true'.
+21:48:10.229 server/gateway.ts(333,34): error TS2345: Argument of type 'string | null' is not assignable to parameter of type 'string'.
+21:48:10.230   Type 'null' is not assignable to type 'string'.
+21:48:10.230 server/gateway.ts(345,15): error TS2339: Property 'getEntitlements' does not exist on type 'typeof import("/vercel/path0/server/_shared/entitlement-check")'.
+21:48:10.230 server/gateway.ts(408,58): error TS2554: Expected 0 arguments, but got 3.
+21:48:10.230 server/gateway.ts(409,32): error TS2322: Type 'boolean' is not assignable to type 'Response'.
+21:48:10.230 server/gateway.ts(494,78): error TS2554: Expected 0 arguments, but got 1.
+21:48:10.230 
+21:48:11.513 Using TypeScript 5.9.3 (local user-provided)
+21:48:12.175 Using TypeScript 5.9.3 (local user-provided)
+21:48:13.155 Using TypeScript 5.9.3 (local user-provided)
+21:48:14.224 Using TypeScript 5.9.3 (local user-provided)
+21:48:15.593 Using TypeScript 5.9.3 (local user-provided)
+21:48:16.902 Using TypeScript 5.9.3 (local user-provided)
+21:48:17.959 Using TypeScript 5.9.3 (local user-provided)
+21:48:19.189 Using TypeScript 5.9.3 (local user-provided)
+21:48:20.096 Using TypeScript 5.9.3 (local user-provided)
+21:48:21.020 Using TypeScript 5.9.3 (local user-provided)
+21:48:21.946 Using TypeScript 5.9.3 (local user-provided)
+21:48:23.066 Using TypeScript 5.9.3 (local user-provided)
+21:48:24.439 Using TypeScript 5.9.3 (local user-provided)
+21:48:26.543 Using TypeScript 5.9.3 (local user-provided)
+21:48:27.544 Using TypeScript 5.9.3 (local user-provided)
+21:48:29.529 Using TypeScript 5.9.3 (local user-provided)
+21:48:31.768 Using TypeScript 5.9.3 (local user-provided)
+21:48:32.610 Using TypeScript 5.9.3 (local user-provided)
+21:48:33.926 Using TypeScript 5.9.3 (local user-provided)
+21:48:34.762 Using TypeScript 5.9.3 (local user-provided)
+21:48:35.588 Using TypeScript 5.9.3 (local user-provided)
+21:48:36.394 Using TypeScript 5.9.3 (local user-provided)
+21:48:37.462 Using TypeScript 5.9.3 (local user-provided)
+21:48:38.924 Using TypeScript 5.9.3 (local user-provided)
+21:48:39.830 Using TypeScript 5.9.3 (local user-provided)
+21:48:40.683 Using TypeScript 5.9.3 (local user-provided)
+21:48:42.587 Using TypeScript 5.9.3 (local user-provided)
+21:48:43.437 Using TypeScript 5.9.3 (local user-provided)
+21:48:44.371 Using TypeScript 5.9.3 (local user-provided)
+21:48:45.267 Using TypeScript 5.9.3 (local user-provided)
+21:48:46.183 Using TypeScript 5.9.3 (local user-provided)
+21:48:47.051 Using TypeScript 5.9.3 (local user-provided)
+21:48:47.432 Using TypeScript 5.9.3 (local user-provided)
+21:48:47.774 api/brief/share-url.ts(38,10): error TS2305: Module '"../../server/_shared/entitlement-check"' has no exported member 'getEntitlements'.
+21:48:47.774 
+21:48:47.975 Using TypeScript 5.9.3 (local user-provided)
+21:48:48.809 Using TypeScript 5.9.3 (local user-provided)
+21:48:49.617 Using TypeScript 5.9.3 (local user-provided)
+21:48:50.466 Using TypeScript 5.9.3 (local user-provided)
+21:48:51.812 Using TypeScript 5.9.3 (local user-provided)
+21:48:52.478 Using TypeScript 5.9.3 (local user-provided)
+21:48:52.795 api/latest-brief.ts(32,10): error TS2305: Module '"../server/_shared/entitlement-check"' has no exported member 'getEntitlements'.
+21:48:52.795 
+21:48:53.526 Using TypeScript 5.9.3 (local user-provided)
+21:48:54.635 Using TypeScript 5.9.3 (local user-provided)
+21:48:54.998 api/notification-channels.ts(19,10): error TS2305: Module '"../server/_shared/entitlement-check"' has no exported member 'getEntitlements'.
+21:48:54.999 
+21:48:55.162 Using TypeScript 5.9.3 (local user-provided)
+21:48:55.492 api/notify.ts(17,10): error TS2305: Module '"../server/_shared/entitlement-check"' has no exported member 'getEntitlements'.
+21:48:55.493 
+21:48:56.708 Using TypeScript 5.9.3 (local user-provided)
+21:48:57.373 Using TypeScript 5.9.3 (local user-provided)
+21:48:58.090 Using TypeScript 5.9.3 (local user-provided)
+21:48:58.573 Using TypeScript 5.9.3 (local user-provided)
+21:48:58.985 Build Completed in /vercel/output [4m]
+21:48:59.820 Deploying outputs...
+21:49:04.107 Build failed with 1 error:
+21:49:04.107 vc-file-system:__vc__ns__/7/api/brief/share-url.js:36:9: ERROR: No matching export in "vc-file-system:__vc__ns__/7/server/_shared/entitlement-check.js" for import "getEntitlements"
