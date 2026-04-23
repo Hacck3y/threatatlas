@@ -35,7 +35,7 @@ import {
   FEEDS,
   INTEL_SOURCES,
 } from '@/config';
-import { VARIANT_META } from '@/config/variant-meta';
+import { getVariantHref, type VariantKey } from '@/config/variant';
 import { isDesktopRuntime } from '@/services/runtime';
 import {
   saveSnapshot,
@@ -809,7 +809,7 @@ export class EventHandlerManager implements AppModule {
       return;
     }
 
-    const target = options.href || VARIANT_META[variant]?.url;
+    const target = getVariantHref(variant as VariantKey, options.href || window.location.href);
     if (!target) return;
     try {
       const parsed = new URL(target, window.location.href);

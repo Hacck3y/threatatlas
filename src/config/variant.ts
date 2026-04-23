@@ -6,26 +6,53 @@ const buildVariant = (() => {
   }
 })();
 
+export const VARIANT_KEYS = ['full', 'tech', 'finance', 'commodity', 'happy'] as const;
+export type VariantKey = typeof VARIANT_KEYS[number];
+
+export function normalizeVariant(value: string | null | undefined): VariantKey | null {
+  return VARIANT_KEYS.includes(value as VariantKey) ? (value as VariantKey) : null;
+}
+
+export function getVariantFromSearch(search: string): VariantKey | null {
+  return normalizeVariant(new URLSearchParams(search).get('variant'));
+}
+
+export function getVariantForHostname(hostname: string): VariantKey {
+  if (hostname.startsWith('tech.')) return 'tech';
+  if (hostname.startsWith('finance.')) return 'finance';
+  if (hostname.startsWith('happy.')) return 'happy';
+  if (hostname.startsWith('commodity.')) return 'commodity';
+  return 'full';
+}
+
+export function getVariantHref(variant: VariantKey, currentUrl: string): string {
+  const url = new URL(currentUrl);
+  if (variant === 'full') {
+    url.searchParams.delete('variant');
+  } else {
+    url.searchParams.set('variant', variant);
+  }
+  return url.toString();
+}
+
 export const SITE_VARIANT: string = (() => {
-  if (typeof window === 'undefined') return buildVariant;
+  const buildResolved = normalizeVariant(buildVariant) ?? 'full';
+  if (typeof window === 'undefined') return buildResolved;
 
   const isTauri = '__TAURI_INTERNALS__' in window || '__TAURI__' in window;
   if (isTauri) {
-    const stored = localStorage.getItem('threatatlas-variant');
-    if (stored === 'tech' || stored === 'full' || stored === 'finance' || stored === 'happy' || stored === 'commodity') return stored;
-    return buildVariant;
+    return normalizeVariant(localStorage.getItem('threatatlas-variant')) ?? buildResolved;
   }
 
-  const h = location.hostname;
-  if (h.startsWith('tech.')) return 'tech';
-  if (h.startsWith('finance.')) return 'finance';
-  if (h.startsWith('happy.')) return 'happy';
-  if (h.startsWith('commodity.')) return 'commodity';
+  const searchVariant = getVariantFromSearch(window.location.search);
+  if (searchVariant) return searchVariant;
 
+  const hostVariant = getVariantForHostname(location.hostname);
+  if (hostVariant !== 'full') return hostVariant;
+
+  const h = location.hostname;
   if (h === 'localhost' || h === '127.0.0.1') {
-    const stored = localStorage.getItem('threatatlas-variant');
-    if (stored === 'tech' || stored === 'full' || stored === 'finance' || stored === 'happy' || stored === 'commodity') return stored;
-    return buildVariant;
+    return normalizeVariant(localStorage.getItem('threatatlas-variant')) ?? buildResolved;
   }
 
   return 'full';
