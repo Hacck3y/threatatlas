@@ -221,7 +221,7 @@ export async function fetchFeed(feed: Feed): Promise<NewsItem[]> {
 
     if (!url) throw new Error(`No URL found for feed ${feed.name}`);
 
-    const response = await fetchWithProxy(rssProxyUrl(url));
+    const response = await fetchWithProxy(url);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const text = await response.text();
     const parser = new DOMParser();
