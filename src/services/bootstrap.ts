@@ -167,8 +167,8 @@ export async function fetchBootstrapData(): Promise<void> {
   const fastCtrl = new AbortController();
   const slowCtrl = new AbortController();
   const desktop = isDesktopRuntime();
-  const fastTimeout = setTimeout(() => fastCtrl.abort(), desktop ? 5_000 : 1_200);
-  const slowTimeout = setTimeout(() => slowCtrl.abort(), desktop ? 8_000 : 1_800);
+  const fastTimeout = setTimeout(() => fastCtrl.abort(), desktop ? 5_000 : 3_500);
+  const slowTimeout = setTimeout(() => slowCtrl.abort(), desktop ? 8_000 : 6_000);
 
   try {
     const [slowState, fastState] = await Promise.all([
