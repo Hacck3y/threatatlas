@@ -6,8 +6,9 @@
  */
 
 const PRODUCTION_PATTERNS: RegExp[] = [
+  /^https:\/\/(.*\.)?threatatlas\.app$/,
   /^https:\/\/(.*\.)?worldmonitor\.app$/,
-  /^https:\/\/threatatlas-[a-z0-9-]+-elie-[a-z0-9]+\.vercel\.app$/,
+  /^https:\/\/threatatlas-.*\.vercel\.app$/,
   /^https?:\/\/tauri\.localhost(:\d+)?$/,
   /^https?:\/\/[a-z0-9-]+\.tauri\.localhost(:\d+)?$/i,
   /^tauri:\/\/localhost$/,
